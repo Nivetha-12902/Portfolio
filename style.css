@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.jpg); /* Path to your image */
+    background-size: cover;                  /* Makes the image cover the entire area */
+    background-position: center;             /* Centers the image */
+    background-repeat: no-repeat;            /* Prevents the image from repeating */
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: #d43939;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+
+
+
+/* Additional CSS to make columns stack vertically */
+#projects .row {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between items */
+}
+
+#projects .col-md-4 {
+    flex: 1; /* Ensure columns stretch equally */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+
+
+nav ul li a::after {
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+    nav ul li a:hover::after {
+        width: 100%;
+       
+    }
+
+.section {
+    padding: 50px 0;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    font-size: 24px;
+    background-color: #0f0f0f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    }
+    
+    .back-to-top:hover {
+    background-color: #443941;
+    }
+#contact {
+    background-color: hsl(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px#ddb3c0;;
+    margin: 25px auto; /* Center the section */
+    max-width: 600px;
+}
+#contact p {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: rgb(47, 52, 99);
+    text-align: center;
+    padding: 15px;
+    /*position:sticky;*/
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
